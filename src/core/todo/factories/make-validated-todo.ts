@@ -1,9 +1,9 @@
 import { sanitizeStr } from "@/utils/sanitize-str";
 import { validateTodoDescription } from "../schemas/validate-todo-description";
 import { makeNewTodo } from "./make-new-todo";
-import { TMakeValidatedTodo } from "../schemas/todo.contract";
+import { TTodoPresenter } from "../schemas/todo.contract";
 
-export function makeValidatedTodo(description: string): TMakeValidatedTodo {
+export function makeValidatedTodo(description: string): TTodoPresenter {
   const cleanDescription = sanitizeStr(description)
   const validatedDescription = validateTodoDescription(cleanDescription)
 

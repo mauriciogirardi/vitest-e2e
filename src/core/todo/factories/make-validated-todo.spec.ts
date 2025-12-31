@@ -3,7 +3,7 @@ import { makeValidatedTodo } from "./make-validated-todo"
 import * as  validateTodoDescription from "../schemas/validate-todo-description"
 import * as makeNewTodo from "./make-new-todo"
 
-describe('makeValidatedTodo', () => {
+describe('makeValidatedTodo (unit)', () => {
   it('should must call sanitizeStr function with correctly value', () => {
     const { description, sanitizeStrSpy } = makeMocks()
 

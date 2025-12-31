@@ -14,4 +14,4 @@ export type TValidTodo = {
   todo: TTodo
 }
 
-export type TMakeValidatedTodo = TValidTodo | TInvalidTodo
+export type TTodoPresenter = TValidTodo | TInvalidTodo

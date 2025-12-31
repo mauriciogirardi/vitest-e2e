@@ -1,6 +1,6 @@
 import { makeNewTodo } from "./make-new-todo"
 
-describe('makeNewTodo', () => {
+describe('makeNewTodo (unit)', () => {
   it('should create a new todo', () => {
     const expectedTodo = {
       id: expect.any(String),

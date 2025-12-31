@@ -1,6 +1,6 @@
 import { validateTodoDescription } from "./validate-todo-description"
 
-describe('validateTodoDescription', () => {
+describe('validateTodoDescription (unit)', () => {
   it('should must return errors when description have less than 4 character', () => {
     expect(validateTodoDescription('abc')).toStrictEqual({
       errors: [

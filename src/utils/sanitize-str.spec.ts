@@ -1,6 +1,6 @@
 import { sanitizeStr } from "./sanitize-str"
 
-describe('sanitizeStr', () => {
+describe('sanitizeStr (unit)', () => {
   it('should return empty string when have a falsy value', () => {
     // @ts-expect-error todo test
     expect(sanitizeStr()).toBe('')

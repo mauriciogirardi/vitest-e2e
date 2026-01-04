@@ -1,4 +1,3 @@
-
 import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 import path from 'path';
@@ -21,9 +20,11 @@ export default defineConfig({
         '**/*.spec.{ts,tsx}',
         '**/types/**',
         '**/*.d.ts',
+        '**/env',
         '**/*.type.{ts,tsx}',
         '**/*.types.{ts,tsx}',
         '**/*.contract.{ts,tsx}',
+        '**/*.contract.*.{ts,tsx}',
         '**/*.protocol.{ts,tsx}',
         '**/*.interface.{ts,tsx}',
         'src/app/**/layout.{ts,tsx}',
@@ -47,4 +48,4 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
-})
+});

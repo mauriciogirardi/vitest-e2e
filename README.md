@@ -235,8 +235,11 @@ Arquivo package.json:
 
 ### Tipos de testes: unitários, integração e e2e
 
-🧪 Testes unitários (\*.spec.ts(x))
-Testam um único elemento isolado — como funções puras, classes ou até componentes pequenos. Se esse elemento depende de outro (ex: uma função chama outra, ou um componente usa outro), a dependência deve ser mockada. Esses testes não envolvem DOM, rede, banco, nem efeitos colaterais reais.
+🧪 Testes unitários (\*.spec.ts(x)) Testam um único elemento isolado — como
+funções puras, classes ou até componentes pequenos. Se esse elemento depende de
+outro (ex: uma função chama outra, ou um componente usa outro), a dependência
+deve ser mockada. Esses testes não envolvem DOM, rede, banco, nem efeitos
+colaterais reais.
 
 📌 Exemplos:
 
@@ -246,20 +249,28 @@ Testam um único elemento isolado — como funções puras, classes ou até comp
 
 🔄 Testes de integração (\*.test.ts(x))
 
-Validam a integração entre dois ou mais elementos reais do sistema, como um componente que usa outros componentes, um hook que depende de contexto, ou uma função que interage com a API interna. Não há efeitos colaterais externos reais — mockamos banco, rede, arquivos, e-mail, etc.
+Validam a integração entre dois ou mais elementos reais do sistema, como um
+componente que usa outros componentes, um hook que depende de contexto, ou uma
+função que interage com a API interna. Não há efeitos colaterais externos reais
+— mockamos banco, rede, arquivos, e-mail, etc.
 
 📌 Exemplos:
 
-- Testar que <TodoForm /> renderiza os todos corretamente e chama a createTodoAction.
+- Testar que <TodoForm /> renderiza os todos corretamente e chama a
+  createTodoAction.
 - Testar que um formulário envia os dados corretos para a função handleSubmit.
 - Testar que uma API chama o repositório corretamente (com mock do banco).
 
 🌐 Testes end-to-end (\*.e2e.ts)
 
-Simulam o comportamento real do usuário ou do sistema completo. Envolvem o app rodando de verdade (via Playwright, Vitest com fetch real, etc.). Idealmente usam um banco de dados separado e limpo, podendo ou não mockar serviços externos como e-mail, storage, etc.
+Simulam o comportamento real do usuário ou do sistema completo. Envolvem o app
+rodando de verdade (via Playwright, Vitest com fetch real, etc.). Idealmente
+usam um banco de dados separado e limpo, podendo ou não mockar serviços externos
+como e-mail, storage, etc.
 
 📌 Exemplos:
 
 - O usuário preenche um formulário, envia, e vê o item novo na tela.
-- Um teste de API acessa /login, envia credenciais, recebe JWT e acessa rota privada.
-  -Um e-mail de verificação é simulado via mock, mas todo o fluxo roda real.
+- Um teste de API acessa /login, envia credenciais, recebe JWT e acessa rota
+  privada. -Um e-mail de verificação é simulado via mock, mas todo o fluxo roda
+  real.

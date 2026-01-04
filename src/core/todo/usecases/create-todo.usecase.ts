@@ -1,14 +1,14 @@
-import { makeValidatedTodo } from "../factories/make-validated-todo";
-import { todoRepository } from "../repositories/default.repository";
+import { makeValidatedTodo } from '../factories/make-validated-todo';
+import { todoRepository } from '../repositories/default.repository';
 
 export async function createTodoUseCase(description: string) {
-  const validateResult = makeValidatedTodo(description)
+  const validateResult = makeValidatedTodo(description);
 
   if (!validateResult.success) {
-    return validateResult
+    return validateResult;
   }
 
-  const createResult = await todoRepository.create(validateResult.todo)
+  const createResult = await todoRepository.create(validateResult.todo);
 
-  return createResult
+  return createResult;
 }

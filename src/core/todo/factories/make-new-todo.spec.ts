@@ -1,4 +1,4 @@
-import { makeNewTodo } from "./make-new-todo"
+import { makeNewTodo } from './make-new-todo';
 
 describe('makeNewTodo (unit)', () => {
   it('should create a new todo', () => {
@@ -6,10 +6,10 @@ describe('makeNewTodo (unit)', () => {
       id: expect.any(String),
       description: 'my new todo',
       createdAt: expect.any(String),
-    }
+    };
 
-    const newTodo = makeNewTodo('my new todo')
+    const newTodo = makeNewTodo('my new todo');
 
-    expect(newTodo).toStrictEqual(expectedTodo)
-  })
-})
+    expect(newTodo).toStrictEqual(expectedTodo);
+  });
+});
